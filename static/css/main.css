@@ -1,0 +1,309 @@
+:root {
+  --logo: #ff70a6;
+  --girl: #f7f7f7;
+  --boy: #f9f9f9;
+}
+body {
+    
+    font-family: lato;
+    font-weight: 500;
+  
+}  
+
+/* Navbar Styles */
+
+nav {
+  font-weight: light;
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--back);
+  align-items: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-image: linear-gradient(to bottom right, #7426e6, #16bdac)
+}
+.logo {
+
+  font-size: 25px;
+  letter-spacing: 1px;
+  color: white;
+  text-transform: uppercase;
+  padding: 2px 12px;
+  border-radius: 8px;
+  font-family: cursive;
+}
+
+.logo img{
+
+    width: 86px;
+    height: 75px !important;
+    border-radius: 500pc;
+    margin: 5px 26px;
+    padding: 5px;
+    border: 0px solid white;
+
+
+}
+
+
+.logo:hover {
+  color: white;
+  text-decoration: none;
+}
+form {
+  position: relative;
+}
+
+
+.search-box {
+  border-radius: 20px 0px 0px 20px !important;
+  width: 60% !important;
+  border: none !important;
+  background-color: #f2f3f5 !important;
+  box-shadow: 0 1px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#search-icon{
+
+border-radius: 0px 20px 20px 0px;
+
+padding: 11px;
+
+background: #f2f3f5;
+
+color: #0718b1;
+
+box-shadow: 1px 4px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+}
+/* Navbar Styles end */
+
+/* Card Styles */
+
+.card {
+  
+  transition: 0.3s;
+  min-width: 250px;
+  box-sizing: border-box;
+  
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+img {
+  width: 130px;
+  height: 130px !important;
+  border-radius:500pc ;
+  margin: 20px 60px;
+  border: 3px solid white
+
+}
+.card-header {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+a.text-center.header-link {
+    font-weight: 700;
+    color: #4c4cb5;
+    font-size: 17px;
+    text-align: center;
+}
+
+
+.header-link:hover {
+  text-decoration: none;
+}
+
+.boy-card{
+  background-image: linear-gradient(to bottom right, #de1790, #2e2077);
+  box-shadow: 0px 17px 15px 3px #4a515847;
+  border-radius:20px;
+  border: none;
+}
+
+.boy-card .card-header {
+  background-color: var(--boy); 
+}
+.boy-card .card-body,
+.boy-card .card-body p a {
+  color: white;
+}
+
+.girl-card{
+    
+  background-image: linear-gradient(to bottom right,  #2e2077 , #de1790);
+  box-shadow: 0px 17px 15px 3px #4a515847;
+  border-radius:20px;
+  border: none;
+}
+.girl-card .card-header {
+  background-color: var(--girl);
+}
+.girl-card .card-body,
+.girl-card .card-body p a {
+  color: white;
+}
+.card-body p {
+  cursor: pointer;
+}
+/* Card Styles end */
+
+/* Main Section */
+.main-part {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/* Main Section ends */
+
+/* footer style */
+footer {
+  background-color: var(--back);
+  color: white;
+  font-size: 18px;
+  border-bottom: 3px solid var(--back);
+  width: 100%;
+  background-image: linear-gradient(to bottom right, #7426e6, #16bdac);
+  border: none;
+}
+
+/*
+CRISPY FORM DESIGN 
+*/
+
+.container.w-25.card.p-4.mt-4 {
+
+    background-image: linear-gradient(to bottom right,  #2e2077 , #de1790) !important;
+
+    color: white;
+
+    box-shadow: 0px 2px 20px 8px #58474714;
+
+    border: none;
+
+    border-radius: 18px;
+
+}
+
+input.w-100.text-white.text-center.my-2.btn.pt-2.pb-2.btn-primary.font-weight-normal {
+    color: #ec1c86 !important;
+    font-size: 18px;
+    border-radius: 30px;
+    background-image: linear-gradient(45deg, #ffffff, #fff0f0);
+    background-image: red;
+    border: none;
+}
+
+/*Gradient Button */
+
+.gradient-button {
+    margin: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 18px;
+    text-align: center;
+    text-decoration:none;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 100% auto;
+    color: #ffffff;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    width: 160px;
+    box-shadow: 0 1px 3px rgba(41, 38, 38, 0.07), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+    cursor: pointer;
+    display: inline-block;
+    border-radius: 25px;
+}
+
+.gradient-button-3 {
+
+  background-image: linear-gradient(to bottom left,  #280fa9 , #de1790);
+  text-decoration:none;
+}
+.gradient-button-4 {
+  
+  background-image: linear-gradient( #ffffff, #d3d2f5);
+  color: #5812c1;
+}
+
+.gradient-button-5 {
+  
+  background-image: linear-gradient( #4dccc5, #4c48d6);
+  color: #ffffff;
+  text-decoration:none;
+}
+.gradient-button-6 {
+  
+  background-image: linear-gradient( #f70000, #ff076b);
+  color: #ffffff;
+}
+
+/* CUSTOM BUTTON STYLE FOR FORMS*/
+
+input.w-100.text-white.text-center.my-2.btn.pt-2.pb-2.btn-danger.font-weight-normal {
+    border-radius: 30px;
+    background-image: linear-gradient(#f70000, #ff076b);
+    border: none;
+}
+
+a.w-100.text-white.text-center.my-2.btn.pt-2.pb-2.btn-success.font-weight-normal{
+    
+
+    border-radius: 30px;
+    background-image: linear-gradient(#4dccc5, #4c48d6);
+    border: none;    
+}
+
+input.w-100.text-white.text-center.my-2.btn.pt-2.pb-2.btn-success.font-weight-normal {
+    border-radius: 20px;
+    border: none;
+    background: white;
+    color: #6337d6 !important;
+    text-transform: uppercase;
+ }
+
+/* footer style ends*/
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+  /* navbar style */
+  nav {
+    flex-direction: column;
+  }
+
+  .logo {
+    font-size: 22px !important;
+  }
+  /* navbar style ends */
+
+  /* card styles */
+  .card-header {
+    font-size: 90% !important;
+  }
+  .card-body p {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+  .card-body {
+    padding: 8px 8px 0 8px;
+  }
+  /* card styles end */
+
+  /* footer style */
+  footer {
+    font-size: 98% !important;
+    font-weight: light;
+    letter-spacing: 1px;
+
+  }
+  /* footer style ends */
+}
+/* Media Queries Ends*/

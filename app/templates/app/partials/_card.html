@@ -1,0 +1,69 @@
+{% load static %}
+
+
+{% if contact.gender == 'male' %}
+
+      <!-- Card for details -->
+       <div class="card my-2 mx-2 boy-card">
+        <a href="{% url 'detail' contact.id %}"><img src=
+        "{% if contact.image %}
+        {{contact.image.url}}
+        {% else %}
+        {% static  './images/man.png' %}
+        {% endif %}"
+        class="img-fluid" /></a>
+        <div class="card-header">
+          <a href="{% url 'detail' contact.id %}" class="text-center header-link"
+            ><i class="fas fa-male mr-2"></i>{{contact.name}}</a
+          >
+        </div>
+        <div class="card-body pb-0">
+          <p>
+            <i class="fas fa-at mr-2"></i>
+            <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+          </p>
+          <p>
+            <i class="fas fa-phone mr-2"></i>
+            <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
+          </p>
+          <p><i class="fas fa-info-circle mr-2"></i> {{contact.info}}</p>
+        </div>
+      </div>
+      <!-- Card for details ends -->
+
+{% else %}
+
+
+      <!-- Card for details girl start -->
+    
+     <div class="card my-2 mx-2 girl-card">
+        <a href="{% url 'detail' contact.id %}"><img src=        
+        "{% if contact.image %}
+        {{contact.image.url}}
+        {% else %}
+        {% static  './images/woman.png' %}
+        {% endif %}" 
+
+        href="{% url 'detail' contact.id %}"        
+        class="img-fluid" /></a>
+        <div class="card-header">
+          <a href="{% url 'detail' contact.id %}" class="text-center header-link"
+            ><i class="fas fa-female mr-2"></i> {{contact.name}}</a
+          >
+        </div>
+        <div class="card-body pb-0">
+          <p>
+            <i class="fas fa-at mr-2"></i>
+            <a href="mailto:{{contact.email}}">{{contact.email}}</a>
+          </p>
+          <p>
+            <i class="fas fa-phone mr-2"></i>
+            <a href="tel:{{contact.phone}}">{{contact.phone}}</a>
+          </p>
+          <p><i class="fas fa-info-circle mr-2"></i> {{contact.info}}</p>
+        </div>
+      </div>
+    
+    <!-- Main Section ends-->
+
+{% endif %}    

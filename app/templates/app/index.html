@@ -1,0 +1,38 @@
+{% extends 'app/main.html' %}
+
+{% load static %}
+
+
+{% block title %}
+
+Home
+
+{% endblock title %}
+
+
+{% block content %}
+
+ <!-- Main Section -->
+    <div class="container">
+      <center><h3 class="heading font-weight-light">Here are your contacts</h3></center>
+      <hr />
+    </div>
+    <div class="container main-part">
+
+{% if contacts %}
+
+{% for contact in contacts %}
+
+{% include 'app/partials/_card.html' %}
+
+{% endfor %}
+
+{% else %}
+
+<h3>OPPPS! NO CONTACTS FOUND. <a href="{% url 'create' %}">Create One Now</a></h3>
+
+{% endif %}  
+
+   </div>   
+
+{% endblock content %}

@@ -1,0 +1,54 @@
+{% extends 'app/main.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+
+{% if contact.manager == request.user %}
+
+Update {{contact}}
+
+{% else %}
+
+You Don't have access to this page
+
+{% endif %}
+
+
+{% endblock title %}
+
+
+{% block content %}
+
+{% if contact.manager == request.user %}
+
+<div class="container">
+      <center><h3 class="heading font-weight-light">Update {{contact}}</h3></center>
+      <hr />
+    </div>
+
+<div class="container w-25 card p-4 mt-4">
+
+	<form action="" method="POST" enctype="multipart/form-data">
+		{% csrf_token %}
+		{{form|crispy}}
+		<input type='submit' value="Update Contact" class="w-100 text-white text-center my-2 btn pt-2 pb-2 btn-success font-weight-normal">
+	</form>
+	
+
+</div>   
+
+
+{% else %}
+
+<div class="container">
+      <center><h3 class="heading font-weight-light">Sorry! You Don't have access to this page --> <a href="{% url 'home' %}">Go Back to Home Page</a></h3></center>
+      <hr />
+    </div>
+
+{% endif %}
+
+
+{%  endblock  %} 
